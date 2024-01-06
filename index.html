@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"> 
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/2e1c041629.js" crossorigin="anonymous"></script>
+   <link rel="stylesheet" href="style.css">
+    <title>Assignment</title>
+</head>
+<body>
+<!-- ===== header starts===== -->
+<header class="container">
+    <h1 class="fw-bolder">Welcome to my new world &#128187</h1>
+    <div class="row">
+        <div class="col-12 ">
+            <button class="btn btn-outline-primary">Want to explore</button>
+            <button class="btn btn-outline-danger">May be later</button>
+        </div>
+    </div>
+</header>
+<!-- ===== main starts===== -->
+<main class="container">
+    <h2 class="fw-bolder"2>Technologies</h2>
+    <div class="row">
+        <div class="card col-lg-3 col-sm-6 col-12">
+            <h3>MongoDB</h3>
+            <img class="img-thumbnail" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/MongoDB_Logo.svg/2560px-MongoDB_Logo.svg.png" alt="">
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Distinctio, ipsa?</p>
+        </div>
+        <div class="card col-lg-3 col-sm-6 col-12">
+            <h3>ExpressJS</h3>
+            <img class="img-thumbnail" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/MongoDB_Logo.svg/2560px-MongoDB_Logo.svg.png" alt="">
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Distinctio, ipsa?</p>
+        </div>
+        <div class="card col-lg-3 col-sm-6 col-12">
+            <h3>React</h3>
+            <img class="img-thumbnail" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/MongoDB_Logo.svg/2560px-MongoDB_Logo.svg.png" alt="">
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Distinctio, ipsa?</p>
+        </div>
+        <div class="card col-lg-3 col-sm-6 col-12">
+            <h3>Node</h3>
+            <img class="img-thumbnail" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/MongoDB_Logo.svg/2560px-MongoDB_Logo.svg.png" alt="">
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Distinctio, ipsa?</p>
+        </div>
+        </div>
+    </div>
+</main>
+<form class="container card shodow-lg bg-info" action="">     
+    <h3 class="m-auto fw-bolder mb-1">Check your eligibility</h3>
+    <h4 id="display" class="form-control p-4"></h4>
+    <label for="dateBirth" class="form-label">What is your DOB?</label>
+    <input type="date" id="dateBirth" class="form-control">
+    <p class="form-text">Please pick your date of birth form the date picker. </p>
+    <button type="button" class="w-50 justify-content-center m-auto btn btn-outline-danger my-5" onclick="calculation()">Calculate</button>
+</form>
+<!-- ===== footer starts===== -->
+
+
+
+   
+    <script> 
+    function calculation(){
+    var a = document.getElementById('dateBirth').value;
+    var b = new Date(a).getFullYear();
+    var c = new Date().getFullYear();
+
+    var result = parseInt(c-b);
+
+    var d = document.getElementById('display');
+    if(result<=0){
+        d.innerHTML = `Wrong entry&#128545, Year ${b} has not come yet.`;
+        d.style.background = "red";
+    }else if (result >=18){
+        d.innerHTML = `Welcome&#128526, you are ${result} years old. You are eligible.`;
+        d.style.background = "green";
+    }else{
+        d.innerHTML = `Sorry&#128530, you are ${result} years old. Please try again after ${18-result} years.`; 
+        d.style.background = "yellow";
+    }
+    }
+
+    </script>
+    <script src="/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>
