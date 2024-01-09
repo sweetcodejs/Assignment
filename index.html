@@ -1,88 +1,215 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"> 
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap"
+        rel="stylesheet">
     <script src="https://kit.fontawesome.com/2e1c041629.js" crossorigin="anonymous"></script>
-   <link rel="stylesheet" href="style.css">
-    <title>Assignment</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700;900&family=Poppins:wght@100;200;300;400;500;600&family=Roboto:wght@100;300;400;500;700;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>EC|Google</title>
 </head>
-<body>
-<!-- ===== header starts===== -->
-<header class="container">
-    <h1 class="fw-bolder">Welcome to my new world &#128187</h1>
-    <div class="row">
-        <div class="col-12 ">
-            <button class="btn btn-outline-primary">Want to explore</button>
-            <button class="btn btn-outline-danger">May be later</button>
-        </div>
-    </div>
-</header>
-<!-- ===== main starts===== -->
-<main class="container">
-    <h2 class="fw-bolder"2>Technologies</h2>
-    <div class="row">
-        <div class="card col-lg-3 col-sm-6 col-12">
-            <h3>MongoDB</h3>
-            <img class="img-thumbnail" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/MongoDB_Logo.svg/2560px-MongoDB_Logo.svg.png" alt="">
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Distinctio, ipsa?</p>
-        </div>
-        <div class="card col-lg-3 col-sm-6 col-12">
-            <h3>ExpressJS</h3>
-            <img class="img-thumbnail" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/MongoDB_Logo.svg/2560px-MongoDB_Logo.svg.png" alt="">
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Distinctio, ipsa?</p>
-        </div>
-        <div class="card col-lg-3 col-sm-6 col-12">
-            <h3>React</h3>
-            <img class="img-thumbnail" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/MongoDB_Logo.svg/2560px-MongoDB_Logo.svg.png" alt="">
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Distinctio, ipsa?</p>
-        </div>
-        <div class="card col-lg-3 col-sm-6 col-12">
-            <h3>Node</h3>
-            <img class="img-thumbnail" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/MongoDB_Logo.svg/2560px-MongoDB_Logo.svg.png" alt="">
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Distinctio, ipsa?</p>
-        </div>
-        </div>
-    </div>
-</main>
-<form class="container card shodow-lg bg-info" action="">     
-    <h3 class="m-auto fw-bolder mb-1">Check your eligibility</h3>
-    <h4 id="display" class="form-control p-4"></h4>
-    <label for="dateBirth" class="form-label">What is your DOB?</label>
-    <input type="date" id="dateBirth" class="form-control">
-    <p class="form-text">Please pick your date of birth form the date picker. </p>
-    <button type="button" class="w-50 justify-content-center m-auto btn btn-outline-danger my-5" onclick="calculation()">Calculate</button>
-</form>
-<!-- ===== footer starts===== -->
 
+<body class="col-lg-8 col-md-10 col-sm-12 justify-content-center m-auto">
 
+    <!-- =====Header Section Starts===== -->
+    <header id="header" class="container mt-lg-5">
+        <div class="row">
+            <div class="col-12 text-center">
+                <h1 class="fw-bolder text-black"><i id="header-logo" class="fa-brands fa-google"></i> Election
+                    Commission of Google</h1>
+                <p class="fw-bold text-black-50"><u>14<sup>th</sup> National Election-<span
+                            class="text-danger">2024</u></span>
+                </p>
+            </div>
+        </div>
+    </header>
+    <!-- =====Header Section Ends===== -->
 
-   
-    <script> 
-    function calculation(){
-    var a = document.getElementById('dateBirth').value;
-    var b = new Date(a).getFullYear();
-    var c = new Date().getFullYear();
+    <!-- =====Navigation Section Starts===== -->
+    <section class="container p-2 mb-3">
+        <div class="row">
+            <div class="col">
+                <nav class="navbar navbar-expand-sm navbar-light card shadow-lg">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav fw-bolder text-primary text-decoration-underline m-auto">
+                            <li class="nav-item"><a class="nav-link" href="#steps">Steps</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#search">Search</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#nidSection">NID Card</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#verify">Verification</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </section>
+    <!-- =====Navigation Section Ends===== -->
 
-    var result = parseInt(c-b);
+    <!-- =====Main Section Starts===== -->
+    <main id="stpes" class="container mt-3">
+        <div class="row">
+            <div class="col-12">
+                <h4 class="fw-bolder text-start text-primary mb-3">Follow the following steps to check your
+                    eligibility
+                    for voting</h4>
+                <ol class="list-group list-group-numbered">
+                    <li class="list-group-item list-group-item-dark">Enter your 10 digits <abbr
+                            title="National Identity Card">NID</abbr>
+                        number</li>
+                    <li class="list-group-item">Click the search button</li>
+                    <li class="list-group-item list-group-item-dark">See your virtual NID card</li>
+                    <li class="list-group-item">Click verify button</li>
+                    <li class="list-group-item list-group-item-dark">See your voting status </li>
+                </ol>
+            </div>
+        </div>
+    </main>
+    <!-- =====Main Section Ends===== -->
 
-    var d = document.getElementById('display');
-    if(result<=0){
-        d.innerHTML = `Wrong entry&#128545, Year ${b} has not come yet.`;
-        d.style.background = "red";
-    }else if (result >=18){
-        d.innerHTML = `Welcome&#128526, you are ${result} years old. You are eligible.`;
-        d.style.background = "green";
-    }else{
-        d.innerHTML = `Sorry&#128530, you are ${result} years old. Please try again after ${18-result} years.`; 
-        d.style.background = "yellow";
-    }
-    }
+    <!-- =====Form Section Starts===== -->
+    <section id="search" class="container mt-3">
+        <div class="row">
+            <div class="col-12">
+                <form class="container card bg-light mt-3">
+                    <mark for="birthReg" class="form-label text-muted pb-2"><mark></mark>NB:This is for testing purpose.
+                        Please
+                        enter NID from 1234567890~9 to see result.</mark></label>
+                    <input class="form-control" list="data" id="birthReg"
+                        placeholder="Type your 10 digit unique NID number">
+                    <datalist id="data">
+                        <option value="1234567890">1234567890</option>
+                        <option value="1234567891">1234567891</option>
+                        <option value="1234567892">1234567892</option>
+                        <option value="1234567893">1234567893</option>
+                        <option value="1234567894">1234567894</option>
+                        <option value="1234567895">1234567895</option>
+                        <option value="1234567896">1234567896</option>
+                        <option value="1234567897">1234567897</option>
+                        <option value="1234567898">1234567898</option>
+                        <option value="1234567899">1234567899</option>
+                    </datalist>
 
-    </script>
-    <script src="/script.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+                    <button type="button"
+                        class="w-50 justify-content-center d-flex m-auto btn btn-outline-dark mt-3 mb-3 form-control"
+                        onclick="getArray()">Search</button>
+                </form>
+            </div>
+        </div>
+    </section>
+    <!-- =====Form Section Ends===== -->
+
+    <!-- =====NID Section Starts===== -->
+    <section id="nidSection" class="container m-auto justify-content-center mt-5">
+        <div class="row">
+            <div id="display" class="card text-center text-info bg-dark p-3 col-12">
+
+                <h3 class="fw-bolder"><i class="fa-brands fa-google"></i> Republic of Google</h3>
+                <h4 class="fw-bolder">--- NID Card ---</h4>
+            </div>
+        </div>
+        <div class="row">
+            <div id="display" class="card text-start text-info bg-dark col-12">
+                <label for="element1" class="col-form-label">ID</label>
+                <h2 id="element1" class="form-control p-3"></h2>
+                <label for="element2" class="col-form-label">Name</label>
+                <h2 id="element2" class="form-control p-3"></h2>
+                <label for="element3" class="col-form-label">Birth Year</label>
+                <h2 id="element3" class="form-control p-3"></h2>
+
+            </div>
+        </div>
+
+        <!-- =====NID Section Ends===== -->
+
+        <!-- =====Verification Section Starts===== -->
+        <section id="verify" class="container mt-3">
+            <div class="row">
+                <div class="col-12">
+
+                    <form class="container card bg-light mb-3 mt-3">
+                        <h4 id="display-verification" class="form-control p-4"></h4>
+
+                        <button type="button"
+                            class="w-50 justify-content-center d-flex m-auto btn btn-outline-dark mt-3 mb-3  form-control"
+                            onclick="calculation()">Verify</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- =====Verification Section Ends===== -->
+
+        <!-- =====Footer Section Starts===== -->
+
+        <section id="contact" class="container bg-light mt-5">
+            <div class="row">
+                <div class="card shadow col-md-4 p-2 col-12">
+                    <h5 class="fw-bolder">Check me out</h5>
+                    <p><strong>Md. Nazmul Hasan</strong></p>
+                    <div class="align-middle">
+                        <a href="https://www.fb.com"><i class="fa-brands fa-facebook"></i>Facebook</a></br>
+                        <a href="https://www.linkedin.com"><i class="fa-brands fa-linkedin"></i>LinkedIn</a></br>
+                        <a href="https://www.x.com"><i class="fa-brands fa-x-twitter"></i>Twitter</a></br>
+                        <a href="https://www.github.com"><i class="fa-brands fa-github"></i>Github</a>
+                    </div>
+                </div>
+                <div class="card shadow col-md-4 p-2 col-12">
+                    <h5 class="fw-bolder">Feedback</h5>
+                    <div class="row">
+                        <form action="">
+                            <label for="name" class="form-label">Name:</label>
+                            <input type="text" id="name" placeholder="Your Name" class="form-control">
+
+                            <label for="sub" class="form-label">Subject:</label>
+                            <input type="text" id="sub" placeholder="Subject" class="form-control">
+
+                            <label for="email" class="form-label">Email:</label>
+                            <input type="email" id="email" placeholder="someone@email.com" class="form-control">
+
+                            <label for="message" class="form-label">Message:</label>
+                            <input type="text" row="10" id="message" placeholder="Tell me more" class="form-control">
+
+                            <button type="button" class="w-50 justify-content-center d-flex m-auto btn btn-outline-dark mt-3 form-control">Message</button>
+
+                        </form>
+
+                    </div>
+                </div>
+                <div class="card shadow col-md-4 p-2 col-12">
+                    <h5 class="fw-bolder">Address</h5>
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14602.44656245293!2d90.40391916409878!3d23.796839941701165!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c7a7ba38543b%3A0x91d5f14ad296d72e!2sGulshan%202%2C%20Dhaka%201212!5e0!3m2!1sen!2sbd!4v1704558813417!5m2!1sen!2sbd"></iframe>
+                </div>
+            </div>
+
+            <!-- =====Footer Section Ends===== -->
+            <footer class="container bg-light mt-5">
+                <div class="row">
+                    <div class="col-12">
+                        <p class="text-center">All right reserved &#169; 2024</p>
+                    </div>
+                </div>
+
+            </footer>
+             
+            <script src="/script.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+                integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+                crossorigin="anonymous"></script>
 </body>
-</html>
+
+</html> 
